@@ -9,6 +9,7 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const nav = document.querySelector('.nav');
 const navHeight = nav.getBoundingClientRect().height;
+const header = document.querySelector('header');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -37,27 +38,13 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-const header = document.querySelector('header');
-const message = document.createElement('div');
-message.classList.add('cookie-message');
-message.innerHTML =
-  'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
-header.append(message);
-document
-  .querySelector('.btn--close-cookie')
-  .addEventListener('click', function () {
-    message.remove();
-  });
+//Removing Cookie message
+const closeCookie = document.querySelector('.btn--close-cookie');
+const cookie = document.querySelector('.cookie-message');
 
-// const message = `<div class="cookie-message">We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button></div>`;
-// header.insertAdjacentHTML('beforeend', message);
-
-//Styles
-message.style.backgroundColor = '#37383d';
-message.style.width = '100%';
-// message.style.height =
-//   Number.parseFloat(getComputedStyle(message).height) + 10 + 'px';
-message.style.height = '7vh';
+closeCookie.addEventListener('click', function () {
+  cookie.classList.add('hide');
+});
 //Scroll
 const section1 = document.querySelector('#section--1');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -267,6 +254,13 @@ const menu = document.querySelector('.menu');
 const closeButton = document.querySelector('.closeButton');
 menu.addEventListener('click', function () {
   navLinks.classList.toggle('nav-open');
+  menu.classList.toggle('hide');
+  closeButton.classList.toggle('hide');
+});
+closeButton.addEventListener('click', function () {
+  navLinks.classList.toggle('nav-open');
+  menu.classList.toggle('hide');
+  closeButton.classList.toggle('hide');
 });
 const operationsTab = document.querySelectorAll('.operations__tab');
 var options = ['Transfers', 'Loans', 'Closing'];

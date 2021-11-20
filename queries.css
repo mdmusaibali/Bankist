@@ -33,6 +33,7 @@
     position: relative;
     padding: 0 2rem;
     height: 9rem;
+    height: 10vh;
     /* display: none; */
     /* flex-direction: column; */
   }
