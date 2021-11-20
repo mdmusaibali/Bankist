@@ -1,0 +1,133 @@
+@media (max-width: 1052px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 769px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 662px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 426px) {
+  .header__title {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+  .header__content {
+    align-items: center;
+  }
+  .menu {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+  }
+  .nav {
+    position: relative;
+    padding: 0 2rem;
+    height: 9rem;
+    /* display: none; */
+    /* flex-direction: column; */
+  }
+  .nav.sticky {
+    padding: 0 2rem;
+  }
+  .mob-nav__links {
+    display: none;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 2rem;
+  }
+  .header__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__img {
+    width: 60%;
+  }
+  .features {
+    margin: 0 0rem;
+    grid-template-columns: 1fr;
+    /* grid-row: span 3/4; */
+  }
+  .features-img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .features-img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .features-img:nth-child(3) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .features__icon {
+    width: 10rem;
+    height: 10rem;
+  }
+  .features__header {
+    font-size: 3rem;
+    color: #444;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .features__feature {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 5rem;
+    width: auto;
+  }
+  .operations__tab {
+    padding: 1.25rem 3rem;
+  }
+  .operations__content {
+    padding: 2.5rem 7rem 6.5rem 7rem;
+    padding: 5rem 2.5rem;
+  }
+  .footer__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    /* column-gap: 2rem; */
+    row-gap: 2rem;
+  }
+  .footer__item {
+    justify-self: center;
+  }
+  .footer__item:last-child {
+    display: none;
+  }
+}
+@media (max-width: 321px) {
+  html {
+    font-size: 32%;
+  }
+}
