@@ -169,6 +169,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.1,
 });
+console.log(allSections);
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
@@ -212,6 +213,7 @@ const maxSlide = slides.length;
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${(i - slide) * 100}%)`)
+    // (s) => (s.style.transform = "translateX(-100%)")
   );
 };
 goToSlide(0);
