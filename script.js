@@ -26,9 +26,6 @@ btnsOpenModal.forEach((btn, i) => {
   btn.addEventListener("click", openModal);
 });
 
-// for (let i = 0; i < btnsOpenModal.length; i++)
-//   btnsOpenModal[i].addEventListener('click', openModal);
-
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
@@ -53,13 +50,7 @@ btnScrollTo.addEventListener("click", function () {
 });
 
 //Page Navigation
-// document.querySelectorAll('.nav__link').forEach(function (el) {
-//   el.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   });
-// });
+
 if (window.innerWidth < 426) {
   document.querySelectorAll(".nav__item").forEach(function (e, i) {
     e.addEventListener("click", function (e) {
@@ -82,21 +73,6 @@ if (window.innerWidth < 426) {
       }
     });
 }
-
-// document
-//   .querySelector(".nav__links")
-//   .addEventListener("click", function abc(e) {
-//     // if (window.innerWidth < 426) {
-//     //   navLinks.classList.toggle("nav-open");
-//     //   this.removeEventListner("click", abc);
-//     // }
-//     e.preventDefault();
-//     navLinks.classList.toggle("nav-open");
-//     if (e.target.classList.contains("nav__link")) {
-//       const id = e.target.getAttribute("href");
-//       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//     }
-//   });
 
 //Tabbed Components
 const tabs = document.querySelectorAll(".operations__tab");
@@ -135,13 +111,6 @@ const handleHover = function (e) {
 };
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
-
-//Sticky Navigation
-// const initialCords = section1.getBoundingClientRect();
-// window.addEventListener('scroll', function (e) {
-//   if (window.scrollY > initialCords.top) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// });
 
 //Sticky navigation: Intersection Observer API
 const obsCallback = function (entries, observer) {
@@ -265,19 +234,6 @@ const activateDot = function (slide) {
     .classList.add("dots__dot--active");
 };
 activateDot(0);
-
-//Lectures
-// document.addEventListener('DOMContentLoaded', function (e) {
-//   console.log(e);
-// });
-// window.addEventListener('load', function (e) {
-//   console.log('page loaded completely');
-// });
-// window.addEventListener('beforeunload', function (e) {
-//   e.preventDefault();
-//   console.log(e);
-//   e.returnValue = '';
-// });
 
 //MOBILE NAV
 const toggleMenuBarButtons = function () {
